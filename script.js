@@ -152,3 +152,8 @@ window.addEventListener('scroll', () => {
     else nav.style.transform = 'translateY(0)';
     lastY = cur;
 }, { passive: true });
+
+// for google sites
+window.addEventListener('load', () => {
+    window.parent.postMessage({ height: document.body.scrollHeight }, '*');
+});
